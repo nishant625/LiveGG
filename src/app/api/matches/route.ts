@@ -13,6 +13,6 @@ export async function GET(request: Request) {
   console.log(`Fetching ${type} matches`);
   const response = await fetch(endpoints[type as keyof typeof endpoints]);
   const data = await response.json();
-  console.log(`Received data:`, data);
+  // console.log(`Received data:`, data);
   return NextResponse.json(data);
 }
